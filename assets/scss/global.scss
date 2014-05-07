@@ -1,0 +1,48 @@
+@import "compass";
+
+// bower:scss
+
+// endbower
+
+// Delete all of this!
+@import url("//fonts.googleapis.com/css?family=Jim+Nightshade|Kaushan+Script");
+$colour: #EAC7BA;
+$colour-darker: darken($colour, 10%);
+$colour-lighter: lighten($colour, 5%);
+
+*, *:before, *:after {
+	@include box-sizing(border-box);
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	background: image-url("background.jpg") no-repeat center center;
+	background-size: cover;
+	color: $colour;
+	font-family: "Jim Nightshade", cursive;
+	font-family: "Kaushan Script", cursive;
+	font-size: 100%;
+	line-height: 1.4em;
+	text-shadow: 1px 1px $colour-darker;
+}
+
+.tao-te-ching {
+	font-size: 3em;
+	line-height: 1.2em;
+	padding: 1em;
+	max-width: 16em;
+	footer {
+		color: $colour-lighter;
+		font-size: 70%;
+	}
+}
