@@ -3,45 +3,246 @@
 // bower:scss
 // endbower
 
-// Delete all of this!
-@import url("//fonts.googleapis.com/css?family=Jim+Nightshade|Kaushan+Script");
-$colour: #EAC7BA;
-$colour-darker: darken($colour, 10%);
-$colour-lighter: lighten($colour, 5%);
+$purple: #451E5D;
+$cream: #FCF5EB;
+
+@mixin bp($point) {
+	@if $point == smallest {
+		@media (min-width: 37.5em) { @content; }
+	}
+	@else if $point == medium {
+		@media (min-width: 56.25em) { @content; }
+	}
+	@else if $point == biggest {
+		@media (min-width: 75em)  { @content; }
+	}
+}
 
 *, *:before, *:after {
-	@include box-sizing(border-box);
-	margin: 0;
-	padding: 0;
+	box-sizing: border-box;
 }
 
 html, body {
+	background-color: $cream;
+	// background-image: image-url("floral.jpg");
+	background-repeat: repeat;
+	color: lighten(black, 10%);
 	height: 100%;
+	font-family: 'Rosario', sans-serif;
+	line-height: 1.45em;
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+html {
+	font-size: 80%;
+	@include bp("smallest") {
+		font-size: 100%;
+	}
+	@include bp("medium") {
+		font-size: 150%;
+	}
+}
+
+h1, h2, h3, h4, h5, h6, p, time {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $purple;
+}
+
+h1, h2, h3 {
+	// font-family: 'Playball', cursive;
+	font-family: 'Great Vibes', cursive;
+	line-height: 1.2em;
+}
+
+h1 {
+	font-size: 3.375em;
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 2.25em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+a {
+	color: $purple;
+}
+
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+%list-plain {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list-inline {
+	@extend %list-plain;
+	display: block;
+	li {
+		display: inline;
+	}
+}
+
+.list-navigation {
+	@extend %clearfix;
+	@extend %list-plain;
+	background-color: $purple;
+	color: $cream;
+	li, a {
+		display: block;
+	}
+	li {
+		float: left;
+		width: 25%;
+	}
+	a {
+		background-color: $purple;
+		color: $cream;
+		padding: 2em;
+		text-decoration: none;
+		transition: all 0.1s ease-in;
+		&:hover, &:focus {
+			background-color: lighten($purple, 10%);
+			transform: scale(1.1);
+		}
+	}
+}
+
+.list-gallery {
+	@extend %clearfix;
+	@extend %list-plain;
+	margin-left: -1em;
+	margin-top: 2em;
+	li {
+		display: block;
+		float: left;
+		margin-bottom: 1em;
+		padding-left: 1em;
+		width: 50%;
+		@include bp("medium") {
+			width: (100% / 3);
+		}
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.list-profiles {
+	li {
+		margin-right: 1em;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.content-section {
+	padding: 2em 1em;
+	@include bp("smallest") {
+		padding: 4em 2em;
+	}
+}
+
+.content-constrain {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 45em;
+}
+
+.hero-full {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+		justify-content: center;
+		flex-direction: column;
+	flex: 1;
+	min-height: 100%;
+}
+
+.hero-title {
+	background-image: image-url("park-photo.jpg");
+	color: $cream;
+	@include bp("smallest") {
+		background-image: image-url("zoo-photo.jpg");
+		font-size: 120%;
+	}
+	position: relative;
+	&:before {
+		background-color: rgba($purple, 0.5);
+		content: "";
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+	}
+	* {
+		color: $cream;
+		margin-bottom: 0;
+		text-shadow: 0.05em 0.05em $purple;
+		z-index: 1;
+	}
+}
+
+.countdown-clock {
+	.datetime {
+		font-family: 'Great Vibes', cursive;
+		font-size: 2.5em;
+		line-height: 1.5em;
+	}
+	.countdown {
+		font-size: 1.5em;
+	}
+}
+
+.responsive-map {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+	iframe {
+		border: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.map-constrain {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 35em;
 	width: 100%;
 }
 
-body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	
-	background: image-url("background.jpg") no-repeat center center;
-	background-size: cover;
-	color: $colour;
-	font-family: "Jim Nightshade", cursive;
-	font-family: "Kaushan Script", cursive;
-	font-size: 100%;
-	line-height: 1.4em;
-	text-shadow: 1px 1px $colour-darker;
-}
-
-.tao-te-ching {
-	font-size: 3em;
-	line-height: 1.2em;
-	padding: 1em;
-	max-width: 16em;
-	footer {
-		color: $colour-lighter;
-		font-size: 70%;
-	}
+.footer {
+	background-color: $purple;
+	color: $cream;
 }

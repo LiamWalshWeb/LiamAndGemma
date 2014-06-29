@@ -180,6 +180,10 @@ module.exports = function (grunt) {
 
     svgmin: {
       dist: {
+        options: {
+          optimisationLevel: 7,
+          progressive: true
+        },
         files: [{
           expand: true,
           cwd: 'assets/images',

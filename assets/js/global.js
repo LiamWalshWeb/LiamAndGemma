@@ -1,1 +1,1 @@
-"use strict";console.log("Your new tribute!");
+"use strict";var targetDate=new Date("Jul 4, 2015").getTime(),days,hours,minutes,seconds,countdown=document.getElementById("countdown");setInterval(function(){var a=(new Date).getTime(),b=(targetDate-a)/1e3;days=parseInt(b/86400),b%=86400,hours=parseInt(b/3600),b%=3600,minutes=parseInt(b/60),seconds=parseInt(b%60),countdown.innerHTML=days+" days, "+hours+" hours, "+minutes+" minutes, "+seconds+" seconds"},1e3);
