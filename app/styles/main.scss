@@ -1,0 +1,306 @@
+// bower:scss
+// endbower
+
+$purple: #451E5D;
+$cream: #FCF5EB;
+
+@mixin bp($point) {
+	@if $point == smallest {
+		@media (min-width: 37.5em) { @content; }
+	}
+	@else if $point == medium {
+		@media (min-width: 56.25em) { @content; }
+	}
+	@else if $point == biggest {
+		@media (min-width: 75em)  { @content; }
+	}
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html, body {
+	background-color: $cream;
+	background-image: url("../img/background.png");
+	background-repeat: repeat;
+	color: lighten(black, 10%);
+	height: 100%;
+	font-family: 'Rosario', sans-serif;
+	line-height: 1.45em;
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+html {
+	font-size: 80%;
+	@include bp("smallest") {
+		font-size: 100%;
+	}
+	@include bp("medium") {
+		font-size: 150%;
+	}
+}
+
+h1, h2, h3, h4, h5, h6, p, time {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $purple;
+}
+
+h1, h2, h3 {
+	font-family: 'Great Vibes', cursive;
+	line-height: 1.2em;
+}
+
+h1 {
+	font-size: 3.375em;
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 2.25em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+a {
+	color: $purple;
+}
+
+hr {
+	background-size: contain;
+	background-image: url("../img/flourish-center-bottom-alt.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+	height: 1.5em;
+	margin: 2em auto;
+	padding: 0;
+}
+
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+%list-plain {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list-inline {
+	@extend %list-plain;
+	display: block;
+	li {
+		display: inline;
+	}
+}
+
+.list-navigation {
+	@extend %clearfix;
+	@extend %list-plain;
+	background-color: $purple;
+	color: $cream;
+	li, a {
+		display: block;
+	}
+	li {
+		float: left;
+		width: 25%;
+	}
+	a {
+		background-color: $purple;
+		color: $cream;
+		padding: 2em;
+		text-decoration: none;
+		transition: all 0.1s ease-in;
+		&:hover, &:focus {
+			background-color: lighten($purple, 10%);
+			transform: scale(1.1);
+		}
+	}
+}
+
+.list-gallery {
+	@extend %clearfix;
+	@extend %list-plain;
+	margin-left: -1em;
+	margin-top: 2em;
+	li {
+		display: block;
+		float: left;
+		margin-bottom: 1em;
+		padding-left: 1em;
+		width: 50%;
+		@include bp("medium") {
+			width: (100% / 3);
+		}
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.list-profiles {
+	li {
+		margin-right: 1em;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	img {
+		border: 0.2em solid $cream;
+		border-radius: 50%;
+	}
+}
+
+.content-section {
+	padding: 2em 1em;
+	@include bp("smallest") {
+		padding: 4em 2em;
+	}
+}
+
+.content-constrain {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 45em;
+}
+
+.badge {
+	background-image: url("../img/flourish-badge-top.svg"), url("../img/flourish-badge-bottom.svg");
+	background-position: top center, bottom center;
+	background-repeat: no-repeat;
+	background-size: 5em;
+	display: block;
+	line-height: 1em;
+	padding: 1em 0 1.25em;
+	text-align: center;
+	.badge-name, .badge-verb {
+		display: block;
+		line-height: 1em;
+	}
+	.badge-name {
+		font-family: 'Changa One', cursive;
+		text-transform: uppercase;
+	}
+	.badge-verb {
+		font-size: 50%;
+		line-height: 0.75em;
+		margin-top: 0.25em;
+	}
+}
+
+.hero-full {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+		justify-content: center;
+		flex-direction: column;
+	flex: 1;
+	min-height: 100%;
+}
+
+.hero-title {
+	background-image: url("../img/park-photo.jpg");
+	color: $cream;
+	padding: 2em 0;
+	position: relative;
+	@include bp("smallest") {
+		background-image: url("../img/zoo-photo.jpg");
+		font-size: 120%;
+	}
+	&:before {
+		background-color: rgba($purple, 0.5);
+		content: "";
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+	}
+	* {
+		color: $cream;
+		margin-bottom: 0;
+		text-shadow: 0.05em 0.05em $purple;
+		z-index: 1;
+	}
+}
+
+.countdown-clock {
+	margin-top: 1.5em;
+	* {
+		margin-bottom: 0;
+	}
+	.datetime {
+		font-family: 'Great Vibes', cursive;
+		font-size: 2em;
+		line-height: 1em;
+	}
+	.countdown {
+		font-size: 1.5em;
+	}
+}
+
+.responsive-map {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+	iframe {
+		border: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.map-constrain {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 35em;
+	width: 100%;
+}
+
+.main-section {
+	background-image: url("../img/flourish-corner-top-left.svg"), url("../img/flourish-corner-top-right.svg"), url("../img/flourish-corner-bottom-left.svg"), url("../img/flourish-corner-bottom-right.svg");
+	background-position: top left, top right, bottom left, bottom right;
+	background-repeat: no-repeat;
+	background-size: 10em;
+	h1, h2, h3, h4, h5, h6 {
+		background-size: 3em;
+		background-image: url("../img/flourish-center-bottom.svg");
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		padding-bottom: 0.75em;
+	}
+}
+
+.footer {
+	background-color: $purple;
+	color: $cream;
+	* {
+		color: $cream;
+	}
+}
