@@ -1,4 +1,8 @@
 {
   "website": "Liam and Gemma",
-  "googleUA": "UA-29173059-6"
+  "googleUA": "UA-29173059-6",
+  "links": {
+    "church": "https://goo.gl/maps/vJ6g2",
+    "reception": "https://goo.gl/maps/bEnF0"
+  }
 }
