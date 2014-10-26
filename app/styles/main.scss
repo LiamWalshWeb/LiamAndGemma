@@ -21,6 +21,7 @@ $cream: #FCF5EB;
 }
 
 html, body {
+	background-attachment: local;
 	background-color: $cream;
 	background-image: url("../img/background.png");
 	background-repeat: repeat;
@@ -158,13 +159,17 @@ hr {
 }
 
 .list-profiles {
-	li {
+	@extend %clearfix;
+	@extend %list-plain;
+	.profile-item {
+		display: inline-block;
 		margin-right: 1em;
+		max-width: 40%;
 		&:last-child {
 			margin-right: 0;
 		}
 	}
-	img {
+	.profile-image {
 		border: 0.2em solid $cream;
 		border-radius: 50%;
 	}

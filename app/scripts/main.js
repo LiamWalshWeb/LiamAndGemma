@@ -1,5 +1,12 @@
-/*global browser:true */
+/*global WOW */
 'use strict';
+
+var wow = new WOW({
+  boxClass: 'wow',
+  animateClass: 'animated',
+  offset: 0
+});
+wow.init();
 
 // set the date we're counting down to
 var targetDate = new Date('Jul 4, 2015').getTime();
