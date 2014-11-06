@@ -27,7 +27,6 @@ body {
 
 html {
 	background-color: $cream;
-	// background-image: url("../img/background.png");
 	background-repeat: repeat;
 
 	color: lighten(black, 10%);
@@ -114,27 +113,6 @@ hr {
 	}
 }
 
-.list-gallery {
-	@extend %clearfix;
-	@extend %list-plain;
-	margin-left: -1em;
-	margin-top: 2em;
-	li {
-		display: block;
-		float: left;
-		margin-bottom: 1em;
-		padding-left: 1em;
-		width: 50%;
-		@include bp("medium") {
-			width: (100% / 3);
-		}
-	}
-	img {
-		display: block;
-		width: 100%;
-	}
-}
-
 .list-profiles {
 	@extend %clearfix;
 	@extend %list-plain;
@@ -159,10 +137,18 @@ hr {
 	}
 }
 
-.content-constrain {
+%content-constrain-common {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.content-constrain {
+	@extend %content-constrain-common;
 	max-width: 45em;
+}
+
+.content-constrain-small {
+	max-width: 30em;
 }
 
 .badge {
@@ -251,7 +237,10 @@ hr {
 	@include bp("smallest") {
 		background-size: 10em;
 	}
-	h1, h2, h3, h4, h5, h6 {
+}
+
+.content-section {
+	.content-title {
 		background-size: 3em;
 		background-image: url("../img/flourish-center-bottom.svg");
 		background-position: bottom center;
@@ -260,10 +249,77 @@ hr {
 	}
 }
 
+.section-the-reception,
+.section-the-ceremony {
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	text-shadow: 0.1em 0.1em $cream;
+	&:hover,
+	&:focus {
+
+	}
+}
+
+.section-the-reception {
+	background-image: url("../img/lowry.png");
+}
+
+.section-the-ceremony {
+	background-image: url("../img/church.png");
+}
+
+.align-left {
+	text-align: left;
+	margin-right: auto;
+}
+
+.align-right {
+	text-align: right;
+	margin-left: auto;
+}
+
 .footer {
 	background-color: $purple;
 	color: $cream;
 	* {
 		color: $cream;
+	}
+}
+
+/**
+ * Animations
+ **/
+
+.js {
+  .wow {
+    visibility: hidden;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate-slide-up {
+	animation-name: slideUp;
+}
+
+.animate-fade-in {
+	animation-name: fadeIn;
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(2em);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
 	}
 }
