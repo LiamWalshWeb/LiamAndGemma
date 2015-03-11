@@ -2,7 +2,16 @@
   "website": "Liam and Gemma",
   "googleUA": "UA-29173059-6",
   "links": {
-    "church": "https://goo.gl/maps/vJ6g2",
-    "reception": "https://goo.gl/maps/bEnF0"
+    "isis": "http://www.tripadvisor.co.uk/Hotel_Review-g2518500-d628376-Reviews-Isis_Hotel_and_Restaurant-Swinton_Salford_Greater_Manchester_England.html",
+    "zen": "http://www.zen-photographic.co.uk/",
+    "victoria-park": "https://goo.gl/maps/Gk0NX",
+    "church": "https://goo.gl/maps/AYJgm",
+    "reception": "https://goo.gl/maps/iVM2A",
+    "compass-room": "http://www.thelowry.com/landing-pages/weddings-and-civil-partnerships/rooms/",
+    "holiday-inn": "http://www.ihg.com/holidayinn/hotels/gb/en/manchester/mchmc/hoteldetail"
+  },
+  "maps": {
+    "church": "http://maps.googleapis.com/maps/api/staticmap?scale=false&size=600x600&maptype=roadmap&format=jpg&visual_refresh=true&markers=icon:https://goo.gl/maps/AYJgm%7Cshadow:true%7CPatricroft+Methodist+Church,+Alexandra+Road,+Manchester",
+    "reception": "http://maps.googleapis.com/maps/api/staticmap?scale=false&size=600x600&maptype=roadmap&format=jpg&visual_refresh=true&markers=icon:http://maps.googleapis.com/maps/api/staticmap?center=The+Lowry,+Salford&zoom=15&scale=false&size=600x600&maptype=roadmap&sensor=false&format=jpg&visual_refresh=true&markers=size:mid%7Ccolor:red%7CThe+Lowry,+Salford%7Cshadow:true%7CThe+Lowry,+Salford"
   }
 }
