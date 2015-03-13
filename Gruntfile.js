@@ -278,6 +278,40 @@ module.exports = function (grunt) {
       }
     },
 
+    responsive_images: {
+      app: {
+        options: {
+          sizes: [{
+            name: "tiny",
+            width: 480,
+            aspectRatio: true,
+            suffix: ""
+          }, {
+            name: "small",
+            width: 600,
+            aspectRatio: true,
+            suffix: ""
+          }, {
+            name: "medium",
+            width: 900,
+            aspectRatio: true,
+            suffix: ""
+          }, {
+            name: "large",
+            width: 1200,
+            aspectRatio: true,
+            suffix: ""
+          }]
+        },
+        files: [{
+          expand: true,
+          src: ['*.{gif,jpeg,jpg,png}'],
+          cwd: '<%= config.app %>/images/',
+          custom_dest: '<%= config.app %>/images/{%= name %}/'
+        }]
+      }
+    },
+
     htmlmin: {
       dist: {
         options: {
@@ -406,6 +440,7 @@ module.exports = function (grunt) {
         'copy:styles',
         'copy:scripts',
         'assemble:dist',
+        'responsive_images',
         'imagemin',
         'svgmin'
       ]

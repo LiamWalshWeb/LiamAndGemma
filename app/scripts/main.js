@@ -1,9 +1,5 @@
-/*global WOW, $ */
+/*global WOW */
 'use strict';
-
-$.stellar({
-  horizontalScrolling: false
-});
 
 var wow = new WOW({
   boxClass: 'wow',
