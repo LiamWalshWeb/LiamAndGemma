@@ -259,8 +259,7 @@ module.exports = function (grunt) {
     imagemin: {
       dist: {
         options: {
-          optimizationLevel: 7,
-          use: [mozjpeg()]
+          optimizationLevel: 7
         },
         files: [{
           expand: true,
