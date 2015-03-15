@@ -208,8 +208,10 @@ a {
 
 		@include bp("tiny") {
 			background-attachment: fixed;
-			background-image: url(../img/small/band-stand-embrace.jpg);
 			transform: none;
+		}
+		@include bp("small") {
+			background-image: url(../img/small/band-stand-embrace.jpg);
 		}
 		@include bp("medium") {
 			background-image: url(../img/medium/band-stand-embrace.jpg);
@@ -369,7 +371,7 @@ a {
 	position: relative;
 
 	background-color: $secondary;
-	background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/walking-away.jpg);
+	background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/tiny/walking-away.jpg);
 	background-position-x: center !important;
 	background-position-y: bottom;
 	background-size: cover;
@@ -379,11 +381,14 @@ a {
 	color: $primary;
 
 	text-shadow: 1px 1px 1px $font;
+	@include bp("small") {
+		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/small/walking-away.jpg);
+	}
 	@include bp("medium") {
 		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/medium/walking-away-landscape.jpg);
 	}
 	@include bp("largest") {
-		background-image: url(../img/large/walking-away-landscape.jpg);
+		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/large/walking-away-landscape.jpg);
 	}
 
 	.countdown-clock {
