@@ -239,6 +239,9 @@ a {
 			font-size: 2.441em * 1.5;
 		}
 	}
+	.header-date {
+
+	}
 }
 
 .box {
@@ -253,6 +256,51 @@ a {
 	.box-caption {
 
 	}
+}
+
+.boxes-grid {
+	@extend %clearfix;
+	@include bp("medium") {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+
+			background-color: $secondary;
+			background-image: url(../img/medium/flower.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			display: block;
+			height: 100%;
+			width: 100%;
+
+			content: "";
+			opacity: 0.25;
+		}
+	}
+	@include bp("large") {
+		&:before {
+			background-image: url(../img/large/flower.jpg);
+		}
+	}
+	.box {
+		@include bp("medium") {
+			float: left;
+			width: 50%;
+		}
+	}
+}
+
+.box-ceremony,
+.box-reception {
+
 }
 
 .constrain-copy {
@@ -304,6 +352,9 @@ a {
 			position: absolute;
 			left: 0;
 
+			&.image-align-center {
+				top: -50%;
+			}
 			&.image-align-top {
 				top: 0;
 			}
@@ -329,7 +380,10 @@ a {
 
 	text-shadow: 1px 1px 1px $font;
 	@include bp("medium") {
-		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/walking-away-landscape.jpg);
+		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/medium/walking-away-landscape.jpg);
+	}
+	@include bp("largest") {
+		background-image: url(../img/large/walking-away-landscape.jpg);
 	}
 
 	.countdown-clock {
