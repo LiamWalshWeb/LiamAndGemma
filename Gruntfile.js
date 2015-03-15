@@ -36,7 +36,7 @@ module.exports = function (grunt) {
       },
       images: {
         files: ['<%= config.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg}'],
-        tasks: ['newer:copy:images']
+        tasks: ['newer:copy:images', 'responsive_images']
       },
       js: {
       files: ['<%= config.app %>/scripts/{,*/}*.js'],
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer', 'newer:copy:images']
+        tasks: ['sass:server', 'autoprefixer', 'newer:copy:images', 'responsive_images']
       },
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
@@ -432,7 +432,8 @@ module.exports = function (grunt) {
         'copy:styles',
         'copy:scripts',
         'assemble:server',
-        'copy:images'
+        'copy:images',
+        'responsive_images'
       ],
       test: [
         'copy:styles',
@@ -443,7 +444,6 @@ module.exports = function (grunt) {
         'copy:styles',
         'copy:scripts',
         'assemble:dist',
-        'responsive_images',
         'imagemin',
         'svgmin'
       ]
@@ -574,6 +574,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'responsive_images',
     'concurrent:dist',
     'wiredep',
     'useminPrepare',
