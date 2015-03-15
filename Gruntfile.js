@@ -36,7 +36,7 @@ module.exports = function (grunt) {
       },
       images: {
         files: ['<%= config.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg}'],
-        tasks: ['newer:copy:images', 'responsive_images']
+        tasks: ['newer:copy:images', 'newer:responsive_images']
       },
       js: {
       files: ['<%= config.app %>/scripts/{,*/}*.js'],
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer', 'newer:copy:images', 'responsive_images']
+        tasks: ['sass:server', 'autoprefixer', 'newer:copy:images', 'newer:responsive_images']
       },
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
@@ -284,6 +284,7 @@ module.exports = function (grunt) {
     responsive_images: {
       app: {
         options: {
+          newFilesOnly: false,
           sizes: [{
             name: "tiny",
             width: 480,
