@@ -463,22 +463,26 @@ module.exports = function (grunt) {
         partials: ['<%= config.app %>/templates/partials/*.hbs']
       },
       server: {
+        options: {
+          production: false
+        },
         files: [{
           cwd: '<%= config.app %>/templates/pages/',
           dest: '.tmp/',
           expand: true,
           src: ['**/*.hbs', '!_pages/**/*.hbs']
-        }],
-        production: false
+        }]
       },
       dist: {
+        options: {
+          production: true
+        },
         files: [{
           cwd: '<%= config.app %>/templates/pages/',
           dest: '.tmp/',
           expand: true,
           src: ['**/*.hbs', '!_pages/**/*.hbs']
-        }],
-        production: true
+        }]
       }
     },
 
