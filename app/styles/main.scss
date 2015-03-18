@@ -24,7 +24,7 @@ $ivory: #FFFFF0;
 
 $primary: $ivory;
 $secondary: $misty-rose;
-$tertiary: $helio;
+$tertiary: $plum;
 $font: lighten(black, 20%);
 
 /*------------------------------------*\
@@ -110,7 +110,7 @@ body {
 html {
 	background-color: $primary;
 	color: $font;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'Lora', serif;
 	font-size: 100%;
 	line-height: 1.45;
 	padding: 0;
@@ -118,6 +118,9 @@ html {
 	text-align: center;
 	@include bp("tiny") {
 		font-size: 120%;
+	}
+	@include bp("small") {
+		font-size: 140%;
 	}
 }
 
@@ -171,6 +174,11 @@ img {
 
 a {
 	color: $tertiary;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: darken($tertiary, 20%);
+	}
 }
 
 /**
@@ -185,9 +193,9 @@ a {
 
 	transform-style: inherit;
 
-	@include bp("tiny") {
-		height: 23em;
-	}
+	/* @include bp("tiny") {
+		height: 30em;
+	} */
 
 	&::before {
 		position: absolute;
@@ -211,14 +219,14 @@ a {
 			transform: none;
 		}
 		@include bp("small") {
-			background-image: url(../img/small/band-stand-embrace.jpg);
+			background-image: url(../img/medium/band-stand-embrace.jpg);
 		}
 		@include bp("medium") {
-			background-image: url(../img/medium/band-stand-embrace.jpg);
+			background-image: url(../img/large/band-stand-embrace.jpg);
 			background-position: center 30%;
 		}
 		@include bp("largest") {
-			background-image: url(../img/large/band-stand-embrace.jpg);
+			background-image: url(../img/band-stand-embrace.jpg);
 		}
 	}
 
@@ -230,16 +238,20 @@ a {
 		display: block;
 		width: 100%;
 
-		color: $primary;
+		color: $secondary;
 
 		text-align: center;
 		text-shadow: 1px 1px 1px $font;
+
+		@include bp("tiny") {
+			font-size: 1.5rem;
+		}
+		@include bp("small") {
+			font-size: 1.75rem;
+		}
 	}
 	.header-title {
 		margin: 0;
-		@include bp("tiny") {
-			font-size: 2.441em * 1.5;
-		}
 	}
 	.header-date {
 
@@ -332,6 +344,7 @@ a {
 	&:hover,
 	&:focus {
 		background-color: darken($tertiary, 10%);
+		color: $primary;
 	}
 }
 
