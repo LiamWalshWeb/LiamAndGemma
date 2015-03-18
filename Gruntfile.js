@@ -374,6 +374,9 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
+            'images/favicons/favicon.ico',
+            'images/favicons/manifest.json',
+            'images/favicons/browserconfig.xml',
             'images/{,*/}*.webp',
             '{,*/}*.html',
             'fonts/{,*/}*.*'
@@ -583,7 +586,6 @@ module.exports = function (grunt) {
     'uglify',
     'copy:dist',
     'modernizr',
-    'favicons',
     'rev',
     'usemin',
     'htmlmin',
