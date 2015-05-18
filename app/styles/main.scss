@@ -126,10 +126,7 @@ html {
 }
 
 body {
-	backface-visibility: hidden;
 	overflow-y: scroll;
-	perspective: 1px;
-	transform-style: preserve-3d;
 }
 
 h1, h2, h3, h4, p, time {
@@ -187,18 +184,19 @@ a {
  * Header
  **/
 
+.page-parallax {
+	height: 100%;
+	overflow: hidden;
+
+	perspective: 1px;
+}
+
 .page-header {
 	position: relative;
-	overflow: hidden;
 
 	height: 100%;
 
-	backface-visibility: hidden;
-	transform-style: inherit;
-
-	/* @include bp("tiny") {
-		height: 30em;
-	} */
+	transform-style: preserve-3d;
 
 	&::before {
 		position: absolute;
