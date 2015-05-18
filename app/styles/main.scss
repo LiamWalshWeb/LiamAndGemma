@@ -193,6 +193,7 @@ a {
 
 	height: 100%;
 
+	backface-visibility: hidden;
 	transform-style: inherit;
 
 	/* @include bp("tiny") {
