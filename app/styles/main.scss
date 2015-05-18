@@ -188,6 +188,7 @@ a {
 
 .page-header {
 	position: relative;
+	overflow: hidden;
 
 	height: 100%;
 
@@ -252,10 +253,6 @@ a {
 	.header-date {
 
 	}
-}
-
-.page-main {
-	background-color: $primary;
 }
 
 .box {
