@@ -39,7 +39,7 @@ module.exports = function (grunt) {
         tasks: ['newer:copy:images']
       },
       js: {
-      files: ['<%= config.app %>/scripts/{,*/}*.js'],
+        files: ['<%= config.app %>/scripts/{,*/}*.js'],
         tasks: ['jshint', 'newer:copy:scripts'],
         options: {
           livereload: true
@@ -146,7 +146,7 @@ module.exports = function (grunt) {
         reporter: require('jshint-stylish')
       },
       all: [
-        'Gruntfile.js',
+        '!Gruntfile.js',
         '<%= config.app %>/scripts/{,*/}*.js',
         '!<%= config.app %>/scripts/vendor/*',
         'test/spec/{,*/}*.js'
@@ -309,9 +309,16 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          src: ['*.{gif,jpeg,jpg,png}'],
+          src: [
+            '**/*.{gif,jpeg,jpg,png}',
+            '!tiny/**/*.*',
+            '!small/**/*.*',
+            '!medium/**/*.*',
+            '!large/**/*.*',
+            '!favicons/**/*.*'
+          ],
           cwd: '<%= config.app %>/images/',
-          custom_dest: '<%= config.app %>/images/{%= name %}/'
+          custom_dest: '<%= config.app %>/images/{%= name %}/{%= path %}'
         }]
       }
     },
@@ -408,7 +415,7 @@ module.exports = function (grunt) {
         dot: true,
         cwd: '<%= config.app %>/images',
         dest: '.tmp/img/',
-        src: '{,*/}*.{gif,jpeg,jpg,png,svg}'
+        src: '**/*.{gif,jpeg,jpg,png,svg}'
       }
     },
 
@@ -460,7 +467,11 @@ module.exports = function (grunt) {
         layoutdir: '<%= config.app %>/templates/layouts',
         assets: '<%= config.dist %>/img',
         data: ['<%= config.app %>/templates/data/*.{json,yml}'],
-        partials: ['<%= config.app %>/templates/partials/*.hbs']
+        partials: ['<%= config.app %>/templates/partials/*.hbs'],
+        helpers: [
+          'assemble-helpers.js',
+          '*-helper-module'
+        ]
       },
       server: {
         options: {

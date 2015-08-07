@@ -10,89 +10,38 @@ title: The Wedding
 </header>
 
 <main class="page-main">
+  <article class="box">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </article>
+
   <article id="the-story" class="box">
-    <header>
-      <h1 class="box-title">We're getting married</h1>
-    </header>
-    <section class="copy constrain-copy">
-      <p>
-        It was <time datetime="2013-17-11">17<sup>th</sup> November 2013</time> at our <a href="{{ links.victoria-park }}">favourite spot</a> that we decided to spend the rest of our lives together.
-      </p>
-      <p>
-        After being engaged for more then a year and a half the big day <a href="#the-countdown">will soon be here</a>. We hope that this day will bring joy to all who bear witness as well as ourselves.
-      </p>
-    </section>
-  </article>
-
-  <figure class="divider-figure">
-    <img class="figure-image image-align-bottom" src="img/tip-toe-kiss.jpg" alt="Tip Toe Kiss" />
-  </figure>
-
-  <div class="boxes-grid">
-    <article id="the-ceremony" class="box box-ceremony">
+    {{#each timeline }}
       <header>
-        <h1 class="box-title">The Ceremony</h1>
+        <h1 class="box-title">{{ title }}</h1>
       </header>
       <section class="copy constrain-copy">
-        <p>
-          The wedding ceremony will take place at the Patricroft Methodist Church in Eccles.
-        </p>
-        <p>
-          Expecting arrivals from 1pm for a 2pm service.
-        </p>
-        <a class="btn-cta" href="https://www.google.co.uk/maps/place/Patricroft+Methodist+Church/@53.478924,-2.363533,15z/data=!4m2!3m1!1s0x0:0x569599fa4b74ec34">Directions to the Church</a>
+        <ul>
+          {{#each (files images) }}
+            <li>
+              <img src="{{ src }}" alt="{{ name }}" />
+            </li>
+          {{/each }}
+        </ul>
       </section>
-    </article>
-
-    <article id="reception" class="box box-reception">
-      <header>
-        <h1 class="box-title">The Reception</h1>
-      </header>
-      <section class="copy constrain-copy">
-        <p>
-          The wedding breakfast and evening party will take place in the lovely <a href="{{ links.compass-room }}">Compass Room</a> at The Lowry Theatre in Salford Quays.
-        </p>
-        <p>
-          Evening guests are welcome from 7.30pm and onwards.
-        </p>
-        <a class="btn-cta" href="https://www.google.co.uk/maps/place/The+Lowry/@53.470835,-2.296037,15z/data=!4m2!3m1!1s0x0:0xed3c94d61ec8b13f">Directions to The Lowry</a>
-      </section>
-    </article>
-  </div>
-
-  <article id="accomodation" class="box box-accomodation">
-    <header>
-      <h1 class="box-title">Accomodation</h1>
-    </header>
-    <section class="copy constrain-copy">
-      <p>
-        If you are travelling from afar, or simply want a place nearby to stay after the wedding, the <a href="{{ links.holiday-inn }}">Holiday Inn</a> at Media City are offering our guests a discounted price for rooms. Please get in touch for further details.
-      </p>
-    </section>
+    {{/each }}
   </article>
-
-  <figure class="divider-figure">
-    <img class="figure-image image-align-center" src="img/media-city.jpg" alt="Media City" />
-  </figure>
-
-  <article id="gifts" class="box">
-    <header>
-      <h1 class="box-title">Wedding Gifts</h1>
-    </header>
-    <section class="copy constrain-copy">
-      <p>
-        We haven't registered for gifts at stores or online retailers but if you would like to bring a gift of some kind there will be a place at the evening venue (a suitcase) for collecting cards.
-      </p>
-    </section>
-  </article>
-
 </main>
 
 <footer id="the-countdown" class="page-footer box">
   <div class="footer-content constrain-copy">
     <div class="countdown-clock">
-      <h2>We'll see you there!</h2>
-      <div id="countdown" class="countdown"></div>
+      <h2>Footer shizzle</h2>
+    </div>
+    <div class="konami-code">
+      <h2>We've been married...</h2>
+      <div id="marriage-timer"></div>
     </div>
   </div>
 </footer>
