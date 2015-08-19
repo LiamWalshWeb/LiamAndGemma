@@ -649,9 +649,9 @@ a {
 		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/small/walking-away.jpg);
 	}
 	@include bp("medium") {
-		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/medium/walking-away.jpg);
+		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/medium/walking-away-wide.jpg);
 	}
 	@include bp("large") {
-		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/large/walking-away.jpg);
+		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/large/walking-away-wide.jpg);
 	}
 }
