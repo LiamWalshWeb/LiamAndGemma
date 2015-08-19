@@ -24,9 +24,11 @@ title: The Wedding
     <nav id="menu" class="timeline-navigaton">
       <ol class="navigation-list">
         {{#each timeline }}
-          <li class="navigation-item wow animate-fade-up">
-            <a class="navigation-link" href="#{{ slugify title }}">{{ link }}</a>
-          </li>
+          {{#if link }}
+            <li class="navigation-item wow animate-fade-up">
+              <a class="navigation-link scroll-to" href="#{{ slugify title }}">{{ link }}</a>
+            </li>
+          {{/if }}
         {{/each }}
       </ol>
     </nav>

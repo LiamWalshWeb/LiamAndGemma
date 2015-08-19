@@ -43,6 +43,21 @@ $(document).ready(function() {
     $(this).toggleClass('target-activated');
   });
 
+  var scrollTo = $('.scroll-to');
+
+  scrollTo.on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    $('.is-targeted').removeClass('is-targeted');
+    $('.target-activated').removeClass('target-activated');
+
+    var target = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 1000);
+  });
+
   var easterEgg = new Konami();
   var $konamiCode = $('.konami-code');
 

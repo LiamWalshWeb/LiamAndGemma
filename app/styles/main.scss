@@ -548,7 +548,9 @@ a {
 		&:focus {
 			.mosiac-tile {
 				&:nth-child(2) {
-					opacity: 0;
+					.mosiac-image {
+						opacity: 0;
+					}
 				}
 			}
 		}
