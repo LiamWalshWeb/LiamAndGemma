@@ -1,13 +1,6 @@
 /*global WOW, $, Konami */
 'use strict';
 
-var wow = new WOW({
-  boxClass: 'wow',
-  animateClass: 'animated',
-  offset: 0
-});
-wow.init();
-
 // set the date we're counting down to
 var targetDate = new Date('Jul 4, 2015').getTime();
 
@@ -39,6 +32,17 @@ setInterval(function () {
 	}, 1000);
 
 $(document).ready(function() {
+  var cssTarget = $('.css-target-toggle');
+
+  cssTarget.on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var target = $(this).attr('href');
+    $(target).toggleClass('is-targeted');
+    $(this).toggleClass('target-activated');
+  });
+
   var easterEgg = new Konami();
   var $konamiCode = $('.konami-code');
 
@@ -59,4 +63,13 @@ $(document).ready(function() {
       enabled:true
     }
   });
+});
+
+$(window).on('load', function() {
+  var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0
+  });
+  wow.init();
 });

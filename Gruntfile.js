@@ -284,7 +284,6 @@ module.exports = function (grunt) {
     responsive_images: {
       app: {
         options: {
-          newFilesOnly: false,
           sizes: [{
             name: "tiny",
             width: 480,

@@ -2,10 +2,10 @@
 title: The Wedding
 ---
 
-<header id="home" class="page-header">
+<header id="home" class="page-header wow animate-fade-in">
   <div class="header-content">
-    <h1 class="header-title">Liam and Gemma</h1>
-    <time class="header-date datetime" datetime="2015-04-07">4<sup>th</sup> July 2015</time>
+    <h1 class="header-title wow animate-fade-down" data-wow-delay="300ms">Liam and Gemma</h1>
+    <time class="header-date datetime wow animate-fade-down" data-wow-delay="500ms" datetime="2015-04-07">4<sup>th</sup> July 2015</time>
   </div>
 </header>
 
@@ -16,18 +16,34 @@ title: The Wedding
     </p>
   </article>
 
+  <article>
+    <div class="box--breakout">
+      <h2 class="box-title"><a class="timeline-navigation-toggle breakout-link css-target-toggle" href="#menu">Skip to the moment when...</a></h2>
+    </div>
+
+    <nav id="menu" class="timeline-navigaton">
+      <ol class="navigation-list">
+        {{#each timeline }}
+          <li class="navigation-item wow animate-fade-up">
+            <a class="navigation-link" href="#{{ slugify title }}">{{ link }}</a>
+          </li>
+        {{/each }}
+      </ol>
+    </nav>
+  </article>
+
   <article id="the-story" class="timeline">
     {{#each timeline }}
       <section id="{{ slugify title }}" class="timeline-section">
         <div class="timeline-section-content copy">
-          <h1 class="timeline-section-title">{{ title }}</h1>
-          <p>
+          <h1 class="timeline-section-title wow animate-fade-up">{{ title }}</h1>
+          <p class="wow animate-fade-up" data-wow-delay="100ms">
             {{ copy }}
           </p>
         </div>
         <aside class="timeline-section-aside mosiac {{ arrangement }}">
           {{#each images }}
-            <div class="mosiac-tile">
+            <div class="mosiac-tile wow animate-fade-in" data-wow-delay="{{ add (multiply @index 100) 200 }}ms">
               <a class="mosiac-image magnific-gallery-image" style="background-image: url({{ this }});" href="{{ this }}"></a>
             </div>
           {{/each }}
@@ -39,7 +55,7 @@ title: The Wedding
 
 <footer id="the-countdown" class="page-footer box">
   <div class="footer-content constrain-copy">
-    <div class="copy">
+    <div class="copy wow animate-fade-down">
       <h2>A final thank you to all who came. You were there when we began a new chapter in our lives! Hopefully we'll see you whilst our story continues!</h2>
     </div>
     <div class="konami-code mfp-hide white-popup">
