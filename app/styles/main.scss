@@ -27,6 +27,8 @@ $secondary: $misty-rose;
 $tertiary: $plum;
 $font: lighten(black, 20%);
 
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+
 /*------------------------------------*\
   Mixins and Placeholders
 \*------------------------------------*/
@@ -67,24 +69,15 @@ $font: lighten(black, 20%);
   animation-fill-mode: both;
 }
 
-.animate-slide-up {
-	animation-name: slideUp;
+.animate-fade-up {
+	animation-name: fade-up;
+	animation-timing-function: $easeOutQuint;
 }
 
-.animate-fade-in {
-	animation-name: fadeIn;
-}
-
-@keyframes slideUp {
+@keyframes fade-up {
 	from {
 		opacity: 0;
 		transform: translateY(2em);
-	}
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
 	}
 }
 
@@ -103,8 +96,8 @@ $font: lighten(black, 20%);
 html,
 body {
 	box-sizing: border-box;
-	height: 100%;
-	overflow: hidden;
+	min-height: 100%;
+	overflow-x: hidden;
 	width: 100%;
 }
 
@@ -123,12 +116,6 @@ html {
 	@include bp("small") {
 		font-size: 140%;
 	}
-}
-
-body {
-	overflow-y: scroll;
-	perspective: 1px;
-	transform-style: preserve-3d;
 }
 
 h1, h2, h3, h4, p, time {
@@ -183,6 +170,25 @@ a {
 }
 
 /**
+ * Konami Code
+ **/
+
+.js {
+	.konami-code {
+
+	}
+}
+
+.white-popup {
+  position: relative;
+  background: white;
+  padding: 2em;
+  width: auto;
+  max-width: 25em;
+  margin: 2em auto;
+}
+
+/**
  * Header
  **/
 
@@ -190,51 +196,37 @@ a {
 	position: relative;
 	overflow: hidden;
 
-	height: 100%;
+	padding: 2em 1em;
 
-	transform-style: inherit;
+	background-color: $secondary;
+	background-image: url(../img/tiny/band-stand-embrace.jpg);
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
 
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
+	@include bp("tiny") {
+		padding: 2em 1em;
 
-		background-color: $secondary;
-		background-image: url(../img/tiny/band-stand-embrace.jpg);
-		background-position: center top;
-		background-size: cover;
-		background-repeat: no-repeat;
-		height: 100%;
-		width: 100%;
+		background-attachment: fixed;
+	}
+	@include bp("small") {
+		padding: 3em 1em;
 
-		content: "";
-		transform: translateZ(-1px) scale(2);
+		background-image: url(../img/medium/band-stand-embrace.jpg);
+	}
+	@include bp("medium") {
+		padding: 4em 1em;
 
-		@include bp("tiny") {
-			background-attachment: fixed;
-			transform: none;
-		}
-		@include bp("small") {
-			background-image: url(../img/medium/band-stand-embrace.jpg);
-		}
-		@include bp("medium") {
-			background-image: url(../img/large/band-stand-embrace.jpg);
-			background-position: center 30%;
-		}
-		@include bp("largest") {
-			background-image: url(../img/band-stand-embrace.jpg);
-		}
+		background-image: url(../img/large/band-stand-embrace.jpg);
+		background-position: center 30%;
+	}
+	@include bp("large") {
+		padding: 5em 1em;
+
+		background-image: url(../img/band-stand-embrace.jpg);
 	}
 
 	.header-content {
-		position: absolute;
-		bottom: 2em;
-		left: 0;
-
-		display: block;
-		width: 100%;
-
 		color: $secondary;
 
 		text-align: center;
@@ -255,6 +247,10 @@ a {
 	}
 }
 
+/**
+ * Content
+ **/
+
 .box {
 	padding: 2.5em 1.5em;
 	@include bp("small") {
@@ -269,49 +265,190 @@ a {
 	}
 }
 
-.boxes-grid {
-	@extend %clearfix;
+.timeline {
+
+}
+
+.timeline-section {
+
 	@include bp("medium") {
-		position: relative;
-
 		display: flex;
-		align-items: center;
+			flex-direction: row;
 
-		&:before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -1;
+		min-height: 80vh;
 
-			background-color: $secondary;
-			background-image: url(../img/medium/flower.jpg);
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			display: block;
-			height: 100%;
-			width: 100%;
+		&:nth-child(even) {
+			.timeline-section-content {
+				order: 2;
+				padding-left: 4em;
+				padding-right: 2em;
+			}
 
-			content: "";
-			opacity: 0.25;
+			.timeline-section-aside {
+				order: 1;
+			}
 		}
 	}
-	@include bp("large") {
-		&:before {
-			background-image: url(../img/large/flower.jpg);
-		}
-	}
-	.box {
+
+	.timeline-section-content {
+		max-width: 30em;
+		margin: 0 auto;
+		padding: 2.5em 1.5em;
+		text-align: left;
+
 		@include bp("medium") {
-			float: left;
-			width: 50%;
+			flex: 1;
+			min-width: 50%;
+			padding: 3em 2em 3em 4em;
+		}
+	}
+
+	.timeline-section-aside {
+		background-color: $tertiary;
+		min-height: 20em;
+		overflow: hidden;
+
+		@include bp("medium") {
+			flex: 1;
+		}
+
+		.mosiac-tile {
+
 		}
 	}
 }
 
-.box-ceremony,
-.box-reception {
+.mosiac {
+	position: relative;
 
+	&.tiles--2-vert {
+		.mosiac-tile {
+			top: 0;
+			width: 50%;
+			height: 100%;
+
+			&:nth-child(1) {
+				left: 0;
+			}
+			&:nth-child(2) {
+				left: 50%;
+			}
+		}
+	}
+
+	&.tiles--2-horz {
+		.mosiac-tile {
+			left: 0;
+			width: 100%;
+			height: 50%;
+
+			&:nth-child(1) {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: 50%;
+			}
+		}
+	}
+
+	&.tiles--1-vert--2-horz {
+		.mosiac-tile {
+			width: 50%;
+
+			&:nth-child(1) {
+				top: 0;
+				left: 0;
+
+				height: 100%;
+			}
+			&:nth-child(2),
+			&:nth-child(3) {
+				left: 50%;
+				height: 50%;
+			}
+			&:nth-child(2) {
+				top: 0;
+			}
+			&:nth-child(3) {
+				top: 50%;
+			}
+		}
+	}
+
+	&.tiles--2-horz--1-vert {
+		.mosiac-tile {
+			width: 50%;
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				left: 0;
+				height: 50%;
+			}
+			&:nth-child(1) {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: 50%;
+			}
+			&:nth-child(3) {
+				top: 0;
+				left: 50%;
+
+				height: 100%;
+			}
+		}
+	}
+
+	&.tiles--2-switch {
+
+		&:hover,
+		&:focus {
+			.mosiac-tile {
+				&:nth-child(2) {
+					opacity: 0;
+				}
+			}
+		}
+
+		.mosiac-tile {
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.mosiac-tile {
+		position: absolute;
+	}
+}
+
+.mosiac-tile {
+	overflow: hidden;
+	transition: all $easeOutQuint 400ms;
+
+	.mosiac-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.mosiac-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	transition: all $easeOutQuint 400ms;
+
+	&:hover,
+	&:focus {
+		transform: scale(1.1);
+	}
 }
 
 .constrain-copy {
@@ -345,37 +482,9 @@ a {
 	}
 }
 
-.divider-figure {
-	display: block;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	@include bp("small") {
-		position: relative;
-
-		height: 15em;
-		overflow: hidden;
-	}
-
-	.figure-image {
-		display: block;
-		width: 100%;
-		@include bp("small") {
-			position: absolute;
-			left: 0;
-
-			&.image-align-center {
-				top: -50%;
-			}
-			&.image-align-top {
-				top: 0;
-			}
-			&.image-align-bottom {
-				bottom: 0;
-			}
-		}
-	}
-}
+/**
+ * Footer
+ **/
 
 .page-footer {
 	position: relative;
@@ -386,18 +495,18 @@ a {
 	background-position-y: bottom;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-bottom: 15em;
 
 	color: $primary;
 
 	text-shadow: 1px 1px 1px $font;
+
 	@include bp("small") {
 		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/small/walking-away.jpg);
 	}
 	@include bp("medium") {
 		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/medium/walking-away-landscape.jpg);
 	}
-	@include bp("largest") {
+	@include bp("large") {
 		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/large/walking-away-landscape.jpg);
 	}
 

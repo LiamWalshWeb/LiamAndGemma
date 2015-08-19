@@ -4,6 +4,14 @@
   "dependencies": {
     "modernizr": "~2.6.2",
     "normalize-css": "~3.0.1",
-    "WOW": "~1.0.2"
+    "WOW": "~1.0.2",
+    "konami-js": "*",
+    "jquery": "~2.1.4",
+    "magnific-popup": "~1.0.0"
+  },
+  "overrides": {
+    "konami-js": {
+      "main": "konami.js"
+    }
   }
 }

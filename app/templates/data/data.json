@@ -10,67 +10,164 @@
   "timeline": [
     {
       "title": "The morning",
-      "images": "img/tiny/timeline/the-morning/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/500/300",
+        "img/tiny/timeline/the-morning/**"
+      ]
     },
     {
       "title": "The groomsmen arrive",
-      "images": "img/tiny/timeline/groomsmen-arrive/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-horz",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/groomsmen-arrive/**"
+      ]
     },
     {
       "title": "The bride arrives",
-      "images": "img/tiny/timeline/bride-arrives/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--1-vert--2-horz",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/500/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/bride-arrives/**"
+      ]
     },
     {
       "title": "The ceremony",
-      "images": "img/tiny/timeline/the-ceremony/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-horz--1-vert",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/500/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/the-ceremony/**"
+      ]
     },
     {
       "title": "Family photoshoot",
-      "images": "img/tiny/timeline/family-photoshoot/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-switch",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/200/400"
+      ]
     },
     {
       "title": "The Lowry arrival",
-      "images": "img/tiny/timeline/lowry-arrival/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/500/300",
+        "img/tiny/timeline/lowry-arrival/**"
+      ]
     },
     {
       "title": "The drinks reception",
-      "images": "img/tiny/timeline/drinks-reception/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/500/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/drinks-reception/**"
+      ]
     },
     {
       "title": "The wedding breakfast",
-      "images": "img/tiny/timeline/wedding-breakfast/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/wedding-breakfast/**"
+      ]
     },
     {
       "title": "The speeches",
-      "images": "img/tiny/timeline/the-speeches/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/500/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/the-speeches/**"
+      ]
     },
     {
       "title": "Cutting the cake",
-      "images": "img/tiny/timeline/cake-cutting/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/500/300",
+        "img/tiny/timeline/cake-cutting/**"
+      ]
     },
     {
       "title": "The first dance",
-      "images": "img/tiny/timeline/first-dance/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/500/300",
+        "img/tiny/timeline/first-dance/**"
+      ]
     },
     {
       "title": "The party begins!",
-      "images": "img/tiny/timeline/the-party/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/500/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/the-party/**"
+      ]
     },
     {
       "title": "Father and daughter dance",
-      "images": "img/tiny/timeline/father-dance/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/father-dance/**"
+      ]
     },
     {
       "title": "Barbie girls!!!",
-      "images": "img/tiny/timeline/barbie-girl/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/500/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/barbie-girl/**"
+      ]
     },
     {
       "title": "Status Quo",
-      "images": "img/tiny/timeline/status-quo/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/500/300",
+        "img/tiny/timeline/status-quo/**"
+      ]
     },
     {
       "title": "The rest of the night",
-      "images": "img/tiny/timeline/rest-of-the-night/**"
+      "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "arrangement": "tiles--2-vert",
+      "images": [
+        "http://placebear.com/200/300",
+        "http://placebear.com/200/400",
+        "img/tiny/timeline/rest-of-the-night/**"
+      ]
     }
   ]
 }

@@ -1,4 +1,4 @@
-/*global WOW */
+/*global WOW, $, Konami */
 'use strict';
 
 var wow = new WOW({
@@ -37,3 +37,26 @@ setInterval(function () {
     // format countdown string + set tag value
     marriageTimer.innerHTML = days + ' days, ' + hours + ' hours, ' + minutes + ' minutes, ' + seconds + ' seconds';
 	}, 1000);
+
+$(document).ready(function() {
+  var easterEgg = new Konami();
+  var $konamiCode = $('.konami-code');
+
+  easterEgg.code = function() {
+    $.magnificPopup.open({
+      items: {
+        src: $konamiCode
+      },
+      type: 'inline'
+    });
+  };
+
+  easterEgg.load();
+
+  $('.magnific-gallery-image').magnificPopup({
+    type: 'image',
+    gallery: {
+      enabled:true
+    }
+  });
+});
