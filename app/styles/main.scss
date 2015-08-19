@@ -199,7 +199,7 @@ a {
 	padding: 2em 1em;
 
 	background-color: $secondary;
-	background-image: url(../img/tiny/band-stand-embrace.jpg);
+	background-image: url(../img/tiny/little-bear-squeeze.jpg);
 	background-position: center top;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -212,22 +212,22 @@ a {
 	@include bp("small") {
 		padding: 3em 1em;
 
-		background-image: url(../img/medium/band-stand-embrace.jpg);
+		background-image: url(../img/medium/little-bear-squeeze.jpg);
 	}
 	@include bp("medium") {
 		padding: 4em 1em;
 
-		background-image: url(../img/large/band-stand-embrace.jpg);
+		background-image: url(../img/large/little-bear-squeeze.jpg);
 		background-position: center 30%;
 	}
 	@include bp("large") {
 		padding: 5em 1em;
 
-		background-image: url(../img/band-stand-embrace.jpg);
+		background-image: url(../img/little-bear-squeeze.jpg);
 	}
 
 	.header-content {
-		color: $secondary;
+		color: $primary;
 
 		text-align: center;
 		text-shadow: 1px 1px 1px $font;
@@ -279,6 +279,7 @@ a {
 
 		&:nth-child(even) {
 			.timeline-section-content {
+				align-self: center;
 				order: 2;
 				padding-left: 4em;
 				padding-right: 2em;
@@ -489,6 +490,8 @@ a {
 .page-footer {
 	position: relative;
 
+	padding-bottom: 110vh;
+
 	background-color: $secondary;
 	background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/tiny/walking-away.jpg);
 	background-position-x: center !important;
@@ -504,16 +507,9 @@ a {
 		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/small/walking-away.jpg);
 	}
 	@include bp("medium") {
-		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/medium/walking-away-landscape.jpg);
+		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/medium/walking-away.jpg);
 	}
 	@include bp("large") {
-		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/large/walking-away-landscape.jpg);
-	}
-
-	.countdown-clock {
-
-	}
-	.countdown {
-		white-space: nowrap;
+		background-image: linear-gradient($secondary 0%, transparent 60%), url(../img/large/walking-away.jpg);
 	}
 }

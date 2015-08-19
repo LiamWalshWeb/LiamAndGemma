@@ -562,6 +562,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'responsive_images',
       'wiredep',
       'concurrent:server',
       'autoprefixer',
