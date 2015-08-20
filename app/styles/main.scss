@@ -547,7 +547,7 @@ a {
 		&:hover,
 		&:focus {
 			.mosiac-tile {
-				&:nth-child(2) {
+				&:nth-child(1) {
 					.mosiac-image {
 						opacity: 0;
 					}
@@ -561,6 +561,13 @@ a {
 
 			width: 100%;
 			height: 100%;
+
+			&:nth-child(1) {
+				z-index: 2;
+			}
+			&:nth-child(2) {
+				z-index: 1;
+			}
 		}
 	}
 
