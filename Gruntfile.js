@@ -393,6 +393,9 @@ module.exports = function (grunt) {
         }, {
           src: 'CNAME',
           dest: '<%= config.dist %>/CNAME'
+        }, {
+          src: 'robots.txt',
+          dest: '<%= config.dist %>/robots.txt'
         }]
       },
       styles: {
