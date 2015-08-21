@@ -7,11 +7,19 @@
     "WOW": "~1.0.2",
     "konami-js": "*",
     "jquery": "~2.1.4",
-    "magnific-popup": "~1.0.0"
+    "magnific-popup": "~1.0.0",
+    "lazyloadxt": "~1.0.5"
   },
   "overrides": {
     "konami-js": {
       "main": "konami.js"
+    },
+    "lazyloadxt": {
+      "main": [
+        "dist/jquery.lazyloadxt.js",
+        "dist/jquery.lazyloadxt.extra.js",
+        "dist/jquery.lazyloadxt.bg.js"
+      ]
     }
   }
 }

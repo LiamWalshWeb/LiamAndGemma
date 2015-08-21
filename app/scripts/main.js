@@ -32,6 +32,15 @@ setInterval(function () {
 	}, 1000);
 
 $(document).ready(function() {
+  $.extend($.lazyLoadXT, {
+    oninit: {
+      removeClass: ''
+    },
+    onshow: function() {
+      $(this).removeClass('wow-wait-lazy-load');
+    }
+  });
+
   var cssTarget = $('.css-target-toggle');
 
   cssTarget.on('click', function(e) {
@@ -84,7 +93,12 @@ $(window).on('load', function() {
   var wow = new WOW({
     boxClass: 'wow',
     animateClass: 'animated',
-    offset: 0
+    offset: 0,
+    callback: function(box) {
+      if ($(box).attr('data-bg')) {
+        $(box).addClass('wow-wait-lazy-load');
+      }
+    }
   });
   wow.init();
 });
