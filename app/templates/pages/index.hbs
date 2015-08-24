@@ -62,7 +62,9 @@ title: The Wedding
         <aside class="timeline-section-aside mosiac {{ arrangement }}">
           {{#each images }}
             <div class="mosiac-tile">
-              <a class="mosiac-image magnific-gallery-image wow animate-fade-in" data-bg="{{ ../../timelineImagesDir.tiny }}{{ this }}" data-wow-delay="{{ add (multiply @index 100) 200 }}ms" href="{{ ../../timelineImagesDir.large }}{{ this }}"></a>
+              <a class="mosiac-image magnific-gallery-image wow animate-fade-in" data-bg="{{ ../../timelineImagesDir.tiny }}{{ this }}" data-wow-delay="{{ add (multiply @index 100) 200 }}ms" href="{{ ../../timelineImagesDir.large }}{{ this }}">
+                <noscript><img class="mosiac-image--no-js" src="{{ ../../timelineImagesDir.tiny }}{{ this }}" alt="{{ this }}" /></noscript>
+              </a>
             </div>
           {{/each }}
         </aside>
