@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    {{> meta }}
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" type="text/css">
+    <style>
+      * {
+        box-sizing: inherit;
+      }
+
+      html,
+      body {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        background-color: white;
+        color: #9A9A9A;
+
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+        text-align: center;
+      }
+
+      html {
+        font-size: 100%;
+        line-height: 1.4;
+      }
+
+      body {
+        display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        padding: 2em;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: inherit;
+      }
+
+      a {
+        color: cornflowerblue;
+        color: #DA020E;
+        position: relative;
+        text-decoration: none;
+      }
+
+      a::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        width: 0;
+        height: 1px;
+
+        background-color: #DA020E;
+
+        content: "";
+        transition: width 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      a:hover,
+      a:focus {
+        color: #8A0108;
+      }
+
+      a:hover::before,
+      a:focus::before {
+        background-color: #8A0108;
+        width: 100%;
+      }
+
+      .page-title {
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+      }
+
+      .canvas--full-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (min-width: 30em) {
+        .page-title {
+          font-size: 2em;
+        }
+      }
+
+      @media (min-width: 37.5em) {
+        .page-title {
+          font-size: 3em;
+        }
+      }
+
+      @media (min-width: 56.25em) {
+        .page-title {
+          font-size: 3.25em;
+        }
+      }
+
+      @media (min-width: 75em) {
+        .page-title {
+          font-size: 3.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{> body }}
+
+    <canvas id="canvas--not-found" class="canvas--full-screen"></canvas>
+
+    <script>
+    
+    </script>
+  </body>
+</html>
