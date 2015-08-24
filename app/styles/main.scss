@@ -181,6 +181,11 @@ small {
 	font-size: 0.8em;
 }
 
+ul,
+ol {
+	text-align: left;
+}
+
 img {
 	height: auto;
 	max-width: 100%;
@@ -424,7 +429,6 @@ a {
 
 		&:nth-child(even) {
 			.timeline-section-content {
-				align-self: center;
 				order: 2;
 				padding-left: 4em;
 				padding-right: 2em;
@@ -437,6 +441,7 @@ a {
 	}
 
 	.timeline-section-content {
+		align-self: center;
 		max-width: 30em;
 		margin: 0 auto;
 		padding: 2.5em 1.5em;
@@ -562,9 +567,7 @@ a {
 		&:focus {
 			.mosiac-tile {
 				&:nth-child(1) {
-					.mosiac-image {
-						opacity: 0;
-					}
+					opacity: 0;
 				}
 			}
 		}
