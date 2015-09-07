@@ -222,7 +222,7 @@ module.exports = function (grunt) {
           src: [
             '<%= config.dist %>/js/{,*/}*.js',
             '<%= config.dist %>/css/{,*/}*.css',
-            '<%= config.dist %>/img/**/*.{gif,jpeg,jpg,png,svg}',
+            '<%= config.dist %>/img/**/*',
             '<%= config.dist %>/fonts/{,*/}*.*',
             '<%= config.dist %>/*.{ico,png}'
           ]
@@ -380,10 +380,6 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'images/favicons/favicon.ico',
-            'images/favicons/manifest.json',
-            'images/favicons/browserconfig.xml',
-            'images/{,*/}*.webp',
             '{,*/}*.html',
             'fonts/{,*/}*.*'
           ]
@@ -417,7 +413,7 @@ module.exports = function (grunt) {
         dot: true,
         cwd: '<%= config.app %>/images',
         dest: '.tmp/img/',
-        src: '**/*.{gif,jpeg,jpg,png,svg}'
+        src: '**/*'
       }
     },
 
