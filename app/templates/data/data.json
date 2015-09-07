@@ -3,7 +3,7 @@
   "description": "The official website of Liam and Gemma Walsh! All the updates! All the fun! :D",
   "googleUA": "UA-29173059-6",
   "twitter": {
-    "image": "http://liamandgemma.co.uk/img/twitter.jpg",
+    "image": "/img/twitter.jpg",
     "username": "@LiamWalshWeb"
   },
   "links": {
