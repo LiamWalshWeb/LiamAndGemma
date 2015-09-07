@@ -414,6 +414,17 @@ module.exports = function (grunt) {
         cwd: '<%= config.app %>/images',
         dest: '.tmp/img/',
         src: '**/*'
+      },
+      extras: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/images',
+        dest: '<%= config.dist %>/img',
+        src: [
+          'favicons/favicon.ico',
+          'favicons/manifest.json',
+          'favicons/browserconfig.xml'
+        ]
       }
     },
 
@@ -451,6 +462,7 @@ module.exports = function (grunt) {
         'sass',
         'copy:styles',
         'copy:scripts',
+        'copy:extras',
         'assemble:dist',
         'imagemin',
         'svgmin'
