@@ -227,7 +227,9 @@ a {
 	position: relative;
 	overflow: hidden;
 
-	padding: 15em 1em 3em;
+	height: 100vh;
+
+	padding: 1em;
 
 	background-color: $secondary;
 	background-image: url(../img/tiny/little-bear-squeeze-tall.jpg);
@@ -256,6 +258,12 @@ a {
 	}
 
 	.header-content {
+		position: absolute;
+		bottom: 2em;
+
+		display: block;
+		width: 100%;
+
 		color: $primary;
 
 		text-align: center;
