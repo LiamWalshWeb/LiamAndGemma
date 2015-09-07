@@ -2,4 +2,4 @@
 
 # Allow crawling of no content
 User-agent: *
-Disallow: /
+Disallow: 
