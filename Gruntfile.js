@@ -224,7 +224,9 @@ module.exports = function (grunt) {
             '<%= config.dist %>/css/{,*/}*.css',
             '<%= config.dist %>/img/**/*.*',
             '<%= config.dist %>/fonts/{,*/}*.*',
-            '<%= config.dist %>/*.{ico,png}'
+            '<%= config.dist %>/*.{ico,png}',
+            '!<%= config.dist %>/img/twitter.*',
+            '!<%= config.dist %>/img/facebook.*'
           ]
         }
       }
