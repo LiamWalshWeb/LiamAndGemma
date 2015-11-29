@@ -1,4 +1,4 @@
-/*global WOW, $ */
+/*global $ */
 'use strict';
 
 $(document).ready(function() {
@@ -12,5 +12,3 @@ $(document).ready(function() {
     $(target).toggleClass('is-open');
   });
 });
-
-console.log(WOW);

@@ -1,0 +1,25 @@
+{{> meta }}
+
+{{!-- Twitter Meta Data --}}
+<meta name="twitter:card" content="photo" />
+<meta name="twitter:site" content="{{ twitter.username }}" />
+<meta name="twitter:title" content="{{ title }} | {{ website }}" />
+<meta name="twitter:description" content="{{ description }}" />
+<meta name="twitter:image" content="{{ twitter.image }}" />
+
+{{!-- Facebook Meta Data --}}
+<meta property="og:url" content="http://liamandgemma.co.uk/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:image" content="{{ twitter.image }}" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" rel="stylesheet" type="text/css">
+
+<!-- build:css(.tmp) css/happy-birthday--phil.css -->
+<link rel="stylesheet" href="css/happy-birthday--phil.css">
+<!-- endbuild -->
+
+<!-- build:js js/vendor/modernizr.js -->
+<script src="bower_components/modernizr/modernizr.js"></script>
+<!-- endbuild -->
