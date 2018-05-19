@@ -41,7 +41,6 @@
   <meta property="og:description" content="To all of those who've got us this far... thank you..." />
   <meta property="og:image" content="http://liamandgemma.co.uk/images/going-home.max.jpg" />
 
-  <link href="http://fonts.googleapis.com/css?family=Great+Vibes|Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -71,10 +70,13 @@
 
   </main>
 
+  <!-- Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lora:400,400i,700,700i" rel="stylesheet">
+
   <!-- Let's register our serviceworker -->
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
+      navigator.serviceWorker.register('./service-worker.js')
     }
   </script>
 
