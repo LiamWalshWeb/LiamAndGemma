@@ -4,128 +4,6 @@
 \*------------------------------------*/
 
 /*------------------------------------*\
-  Animations
-\*------------------------------------*/
-
-@-webkit-keyframes fadein {
-	from {
-		opacity: 0;
-	}
-}
-
-@keyframes fadein {
-	from {
-		opacity: 0;
-	}
-}
-
-@-webkit-keyframes heartbeat {
-	0%,
-  48% {
-		background-color: #060708;
-	}
-
-  50% {
-    background-color: rgba(6, 11, 16, 0.9);
-  }
-
-  52%,
-  55% {
-    background-color: #060708;
-  }
-
-  57% {
-    background-color: rgba(6, 11, 16, 0.9);
-  }
-
-  59%,
-  72% {
-    background-color: #060708;
-  }
-
-  74% {
-    background-color: rgba(8, 16, 23, 0.8);
-  }
-
-  76%,
-  80% {
-    background-color: #060708;
-  }
-
-  82% {
-    background-color: rgba(8, 16, 23, 0.8);
-  }
-
-  84%,
-  100% {
-    background-color: #060708;
-  }
-}
-
-@keyframes heartbeat {
-	0%,
-  48% {
-		background-color: #060708;
-	}
-
-  50% {
-    background-color: rgba(6, 11, 16, 0.9);
-  }
-
-  52%,
-  55% {
-    background-color: #060708;
-  }
-
-  57% {
-    background-color: rgba(6, 11, 16, 0.9);
-  }
-
-  59%,
-  72% {
-    background-color: #060708;
-  }
-
-  74% {
-    background-color: rgba(8, 16, 23, 0.8);
-  }
-
-  76%,
-  80% {
-    background-color: #060708;
-  }
-
-  82% {
-    background-color: rgba(8, 16, 23, 0.8);
-  }
-
-  84%,
-  100% {
-    background-color: #060708;
-  }
-}
-
-@-webkit-keyframes baby {
-  from {
-    background-color: #060708;
-  }
-
-  to {
-    background-color: transparent;
-  }
-}
-
-@keyframes baby {
-  from {
-    background-color: #060708;
-  }
-
-  to {
-    background-color: transparent;
-  }
-}
-
-/*------------------------------------*\
   Code
 \*------------------------------------*/
 
@@ -151,118 +29,90 @@ body {
 }
 
 html {
-	font-family: Lato, Arial, serif;
-	font-size: 3vw;
+	font-family: Lora, Arial, serif;
+	font-size: 100%;
 	line-height: 1.4;
 	padding: 0;
 	margin: 0;
-	text-align: center;
 
   background-color: #060708;
-  background-image: url(../images/baby.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #daeefd;
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-
-  text-align: center;
+	display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	padding: 7vw;
 
   background-color: #14273a;
+	color: white;
 }
 
-.intro__title {
-  font-size: 2em;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+h1, h2, h3, p {
+	margin-top: 0.8em;
+	margin-bottom: 0;
 }
 
-.intro__timer {
-  font-size: 1.3em;
-  margin: 0;
+h1, h2, h3 {
+	font-family: 'Great Vibes', cursive;
 }
 
-
-
-html.js body {
-  -webkit-animation-delay: 0ms, 10000ms;
-          animation-delay: 0ms, 10000ms;
-  -webkit-animation-duration: 10000ms, 3000ms;
-          animation-duration: 10000ms, 3000ms;
-  -webkit-animation-fill-mode: both, forwards;
-          animation-fill-mode: both, forwards;
-  -webkit-animation-name: heartbeat, baby;
-          animation-name: heartbeat, baby;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+a {
+	color: white;
 }
 
-html.js.is-time body {
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+.letter {
+	font-size: 5vw;
+
+	background: white;
+	color: #333;
 }
 
-html.js .intro__title__one,
-html.js .intro__title__two,
-html.js .intro__timer {
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-name: fadein;
-          animation-name: fadein;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+.letter a {
+	color: #111;
 }
 
-html.js.is-time .intro__title__one,
-html.js.is-time .intro__title__two,
-html.js.is-time .intro__timer {
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+.letter__background {
+	display: block;
+	width: 100%;
+	height: auto !important;
 }
 
-html.js .intro__title__one {
-  -webkit-animation-duration: 4000ms;
-          animation-duration: 4000ms;
-  -webkit-animation-delay: 10000ms;
-          animation-delay: 10000ms;
+.letter__content {
+	display: block;
+	padding: 7vw;
 }
 
-html.js .intro__title__two {
-  -webkit-animation-duration: 4000ms;
-          animation-duration: 4000ms;
-  -webkit-animation-delay: 15000ms;
-          animation-delay: 15000ms;
+.letter__title {
+  font-size: 2.5em;
+	margin-top: 0;
 }
 
-html.js .intro__timer {
-  -webkit-animation-duration: 5000ms;
-          animation-duration: 5000ms;
-  -webkit-animation-delay: 20000ms;
-          animation-delay: 20000ms;
+.letter__signature {
+	font-style: italic;
+	margin-top: 1.5em;
 }
 
 
 
-@media (min-width: 30em) {
+@media (min-width: 32.5em) {
+
+	.letter {
+		font-size: 4vw;
+	}
+
+}
+
+
+
+@media (min-width: 35em) {
+
+	.letter {
+		font-size: 3vw;
+		width: 80vw;
+	}
 
 }
 
@@ -270,20 +120,8 @@ html.js .intro__timer {
 
 @media (min-width: 37.5em) {
 
-
-
-}
-
-
-
-@media (min-width: 56.25em) {
-
-
-
-}
-
-
-
-@media (min-width: 75em)  {
+	.letter {
+		font-size: 2vw;
+	}
 
 }

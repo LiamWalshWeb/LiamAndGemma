@@ -2,5 +2,11 @@
   "name": "liam-and-gemma",
   "engines": {
     "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "sw-precache": "^5.2.1"
+  },
+  "scripts": {
+    "sw-precache-build": "sw-precache --config=sw-precache-config.js --verbose"
   }
 }
