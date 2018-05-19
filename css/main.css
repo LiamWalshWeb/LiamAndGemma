@@ -35,19 +35,25 @@ html {
 	padding: 0;
 	margin: 0;
 
-  background-color: #060708;
-  color: #daeefd;
+  background-color: #14273a;
+  color: white;
 }
 
 body {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	padding: 7vw;
-
-  background-color: #14273a;
-	color: white;
 }
 
 h1, h2, h3, p {
