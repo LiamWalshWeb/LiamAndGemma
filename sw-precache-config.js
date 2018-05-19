@@ -6,5 +6,5 @@ module.exports = {
     'js/**/*.js'
   ],
   stripPrefix: '/',
-  cacheId: 'V1'
+  cacheId: 'V1.0.1'
 };
